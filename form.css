@@ -1,0 +1,100 @@
+/* Main Form Container */
+.form {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Section Visibility Control */
+.display-none {
+  display: none;
+}
+
+.display-view {
+  display: block;
+}
+
+/* Form Labels */
+.form label {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+/* Form Inputs */
+.form input[type="text"],
+.form input[type="file"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form input[type="text"]:focus,
+.form input[type="file"]:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* File Input Customization (Optional Enhancement) */
+.form input[type="file"] {
+  background: #edf2f7;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.form .btn {
+  margin-top: 20px;
+  padding: 0.75rem 1.5rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+  width: 60%;          
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+.form .btn:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+.form .btn:active {
+  transform:scale(0.80);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .form label {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .form .btn {
+    padding: 0.65rem;
+    font-size: 0.95rem;
+  }
+}

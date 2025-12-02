@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto card generator</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background-color: rgba(5, 5, 5, 0.948);
+            width: 800px;
+            height: auto;
+            position: relative;
+            margin: 20px;
+            margin-bottom: 30px;
+        }
+
+        .thumbnail {
+            /* background-color: red;    */
+            width: 200px;
+            position: relative;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin: 15px;
+            border-radius: 7px;
+        }
+
+        .title {
+            color: white;
+            position: absolute;
+            top: 20px;
+            left: 240px;
+            font-size: 16px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .cname-veiws-monthsold {
+            color: white;
+            position: absolute;
+            top: 70px;
+            left: 240px;
+            font-size: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .duration {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.532);
+            position: absolute;
+            bottom: 23px;
+            right: -11px;
+            padding: 3px 5px;
+            border-radius: 5px;
+        }
+
+        #generate {
+            padding: 12px 35px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(135deg, #6a5af9, #4f46e5);
+            color: white;
+            margin: 25px auto;
+            display: block;
+            letter-spacing: .5px;
+            transition: .3s ease;
+            box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
+            outline: none;
+        }
+
+        /* Hover Glow Effect */
+        #generate:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0px 0px 18px rgba(90, 80, 255, 0.8),
+                0px 0px 30px rgba(90, 80, 255, 0.5);
+            background: linear-gradient(135deg, #7a6cff, #5a52ff);
+        }
+
+        /* Click Effect */
+        #generate:active {
+            transform: translateY(30%) ;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+
+    <form action="">
+        <button type="button" id="generate" onclick="addform()">Generate Card</button>
+    </form>
+
+    <div id="form" class="form display-none">
+
+        <section id="form">
+            <label for="text">Thumbnail:</label>
+            <input type="file" id="Thumbnail">
+            <br>
+            <label for="text">Title:</label>
+            <input type="text" placeholder="Enter the Title" id="Title">
+            <br>
+            <label for="text">Channel Name:</label>
+            <input type="text" placeholder="Enter the Channel Name" id="Cname">
+            <br>
+            <label for="text">Veiws:</label>
+            <input type="text" placeholder="Enter your own Veiws" id="Veiws">
+            <br>
+            <label for="text">Month:</label>
+            <input type="text" placeholder="Enter the months of uploaded video" id="month">
+            <br>
+            <label for="text">Duration:</label>
+            <input type="text" placeholder="Enter the duration of video " id="duration">
+            <br>
+
+            <button type="button" id="Add" class="btn" onclick="AddEnteredDetails()">ADD</button>
+
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+    <!-- <script src="form.js"></script> -->
+</body>
+
+</html>
